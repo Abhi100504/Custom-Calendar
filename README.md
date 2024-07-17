@@ -10,7 +10,7 @@ LeMAC eliminates the need to manually check both Canvas and PrairieLearn for hom
 
 - **Abhi Ramakrishnan**: Flask App Requests, React Registration, Login, and Calendar
 - **Joseph Chen**: PrairieLearn WebScraping
-- **Aarul Dhawan**: Canvas WebScraping and MySQL
+- **Aarul Dhawan**: Flask App Requests, Canvas WebScraping, and MySQL
 
 ## Technical Architecture
 
