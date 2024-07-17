@@ -1,21 +1,89 @@
-# group-project-readme
-Learning Management Assignment Collector (LeMAC)
+# Learning Management Assignment Collector (LeMAC)
 
-Description: Our project eliminates the need of manually checking both Canvas and PrairieLearn for homework deadlines by automatically importing assignment data and displaying them in an integrated interface. Selenium webdrivers in Python are used in the backend.
-Differences In Our Software Compared To Others: Our software is tailored to UIUC students, because we focused on including assignments from Canvas and PrairieLearn.
+LeMAC eliminates the need to manually check both Canvas and PrairieLearn for homework deadlines by automatically importing assignment data and displaying it in an integrated interface.
 
-Group Members/Responsibilities:
-Joseph Chen: PrairieLearn WebScraping
-Aarul Dhawan: Canvas WebScraping and MySQL
-Brian Beers: React Registration and Login 
-Abhi Ramakrishnan:  Flask App Requests, React Big Calendar
+## Features
 
-Technical Architecture: Upon registration, it would check if its a valid login by calling the Flask App, and then running a selenium based function on the UIUC microsoft login page. If its a valid login, then it would add it to the MySQL database.  
-When logging in, it would retrieve the login information from the SQL Database, and then call the Flask APP run selenium on the Canvas and PrairieLearn Management systems and scrape all the required information based on their HTML ID tags. Then we would display it on the frontend
+**Tailored to UIUC Students**: Focuses on including assignments from Canvas and PrairieLearn, specifically designed for University of Illinois Urbana-Champaign students.
 
-Instructions:
-Install the following libraries:
-Selenium, Beautiful Soup, lxml, Flask, and React
-Setup a MySQL Database, and change the password of the root database in canvas_scraper.py
-cd into canvas_data and run python3 canvas_scraper.py
-In a separate terminal, cd into login-signup and run npm start
+## Group Members and Responsibilities
+
+- **Abhi Ramakrishnan**: Flask App Requests, React Registration, Login, and Calendar
+- **Joseph Chen**: PrairieLearn WebScraping
+- **Aarul Dhawan**: Canvas WebScraping and MySQL
+
+## Technical Architecture
+
+1. **Registration**:
+   - Validates login by calling the Flask App and running a Selenium-based function on the UIUC Microsoft login page.
+   - If the login is valid, adds it to the MySQL database.
+
+2. **Login**:
+   - Retrieves login information from the SQL Database.
+   - Calls the Flask App to run Selenium on Canvas and PrairieLearn systems, scraping all required information based on their HTML ID tags.
+   - Displays the scraped data on the frontend.
+
+## Installation and Setup
+
+### Prerequisites
+
+Ensure you have the following libraries and tools installed:
+
+- Selenium
+- Beautiful Soup
+- lxml
+- Flask
+- React
+- MySQL
+
+### Setup Instructions
+
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/your-repo/LeMAC.git
+    cd LeMAC
+    ```
+
+2. **Setup MySQL Database**:
+    - Create a MySQL database.
+    - Update the `canvas_scraper.py` file with your MySQL root password.
+
+3. **Install Python Dependencies**:
+    ```sh
+    pip install selenium beautifulsoup4 lxml Flask
+    ```
+
+4. **Run the Canvas Scraper**:
+    ```sh
+    cd canvas_data
+    python3 canvas_scraper.py
+    ```
+
+5. **Run the React Frontend**:
+    - Open a separate terminal.
+    ```sh
+    cd login-signup
+    npm install
+    npm start
+    ```
+
+## Example Use Case
+
+Imagine you are a UIUC student juggling multiple assignments from different platforms. LeMAC simplifies your life by integrating Canvas and PrairieLearn assignments into one seamless interface, ensuring you never miss a deadline again.
+
+## Technical Implementation
+
+### Data Sources
+
+- **Canvas and PrairieLearn**: Web scraping performed using Selenium.
+
+### Steps
+
+1. **Extract Assignment Data**:
+    - Use Selenium to scrape assignment data from Canvas and PrairieLearn.
+    - Process this data using Python and store it in a MySQL database.
+
+2. **Display Assignments**:
+    - Retrieve assignment data from MySQL.
+    - Use Flask to serve the data to the React frontend.
+    - Display the assignments in an integrated calendar view.
