@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(#e66465, #9198e5); /* Specify a valid color here */
+}
+
+.auth-form-container, .login-form, .register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+label {
+  text-align: left;
+  /* padding: .25rem 0; */
+}
+
+input {
+  margin: .5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  text-align: left;
+}
+
+button {
+  border: none;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.link-btn {
+  background: none;
+  color: white;
+  text-decoration: underline;
+}
+
+.sublog {
+  width: 195px; /* Adjust as needed */
+  height: 60px; /* Adjust as needed */
+  padding-top: 10px;
+  /* Add other styles as desired */
+  background-color: white; /* Example background color */
+  color: black; /* Example text color */
+  border: none; /* Remove the border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 10px;
+}
+
+.rbc-today:hover {
+  background-color: lightblue; 
+  cursor: pointer;
+}
